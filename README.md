@@ -1,8 +1,8 @@
 # Student Database Management System
-AIM: To Create a program that gets and stores Data about students in a file.It should also be able to do functions like Reading , 
+\nAIM: To Create a program that gets and stores Data about students in a file.It should also be able to do functions like Reading , 
 Modifying and Deleting datas from file.
-ALGORITHM:
-Step 1: Start of Algorithm.
+\nALGORITHM:
+\nStep 1: Start of Algorithm.
 Step 2: Import header files.
 Step 3: Declare line function.
 Step 4: Declare Student Class with data variables fname,lname,course,section and functions add(), list(), modify(), delete_records().
