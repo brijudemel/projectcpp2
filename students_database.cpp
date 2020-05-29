@@ -24,7 +24,7 @@ int main()
 		cout<<"********************STUDENT DBMS********************";
 		line();
 		cout<<"\n\t\t\t\tEnter:"
-    <<"\n\t\t\t\t\t1-Add Records."
+		<<"\n\t\t\t\t\t1-Add Records."
 		<<"\n\t\t\t\t\t2-List Records."
 		<<"\n\t\t\t\t\t3-Modify Records."
 		<<"\n\t\t\t\t\t4-Delete Records."
@@ -47,6 +47,19 @@ int main()
 				s.delete_records();		//delete_records method is called in order to delete data from the file.
 				break;
 			case 5:
+				ofstream p;
+				p.open("feedback.txt",ios::app );
+				int f;											//For Getting feedback.
+				cout<<"Rate this software out of 5(+_+): ";
+				cin>>f;
+				p<<f<<endl;
+				p.close();
+				if(f<3)
+					cout<<"We're sorry if you've faced issues with our software :(";
+				else if(f>2&&f<5)
+					cout<<"Thanks for your support. We will improve it better:)";
+				else
+					cout<<"YAAHOOOO!! Thanks a lot for your support ;)";
 				exit(0);				//To terminate the program.
 		}
 	}
@@ -176,7 +189,7 @@ void student::modify()		//To modify data in file.
 		else
 			cout<<"\nName not found.";
 		int choice;
-		cout<<"\nEnter 1 to delete another data else enter 2:\t";
+		cout<<"\nEnter 1 to Modify another data else enter 2:\t";
 		cin>>choice;
 		if (choice!=1)
 			break;
